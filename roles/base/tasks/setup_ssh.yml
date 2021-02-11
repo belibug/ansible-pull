@@ -1,0 +1,11 @@
+---
+- name: configure SSH
+  tags: configure_ssh
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    line: "{{ item }}"
+  with_items:
+    - "PasswordAuthentication no"
+    - "PermitRootLogin no" 
+    #- "port 588"
+  notify: restart ssh

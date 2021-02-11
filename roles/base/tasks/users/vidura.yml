@@ -1,0 +1,22 @@
+- name: create user | vidura
+  tags: vidura
+  user:
+    name: vidura
+    group: root
+
+- name: add public key | vidura
+  tags: vidura
+  authorized_key:
+    user: vidura
+    key: "{{ item }}"
+  with_file:
+    - vidura/vidura.pub
+
+- name: users | vidura | add sudoers file
+  tags: settings,vidura,sudo,system,users
+  copy:
+    src: vidura/sudoers_vidura
+    dest: /etc/sudoers.d/vidura
+    owner: root
+    group: root
+    mode: 0440

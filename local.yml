@@ -1,0 +1,30 @@
+- hosts: localhost
+  connection: local
+  become: true
+  pre_tasks:
+    - name: pre-run | update package cache
+      tags: always
+      apt:
+        update_cache: yes
+      changed_when: false
+      when: ansible_distribution in ["Debian", "Ubuntu"]
+
+  roles:
+    - role: base
+      name: base role with app setup
+      tags: base, apps
+
+  tasks:
+    - name: send completion alert
+      tags: telegram
+      include_tasks: playbooks/send_completion_alert.yml
+      when:
+        - task_failed is not defined
+        - 0 > 1
+    - name: send failure alert
+      include_tasks: playbooks/send_failure_alert.yml
+      tags: always
+      when:
+        - task_failed is defined
+        - task_failed == true
+        - 0 > 1

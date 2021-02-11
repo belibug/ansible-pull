@@ -1,0 +1,14 @@
+# setup apps
+- name: system setup | apps
+  tags: packages, apps
+  apt:
+    state: latest
+    name:
+      - tree
+      - curl
+      - htop
+      - tmux
+      - wget
+      - neovim
+      - git
+      - stow # for dot files

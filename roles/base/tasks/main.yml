@@ -1,0 +1,18 @@
+---
+- name: Quick Setup
+  block:
+    # Setup users
+    - import_tasks: users/vidura.yml
+
+    # Setup apps
+    - import_tasks: setup_apps.yml
+
+    # setup ssh
+    - import_tasks: setup_ssh.yml
+      tags: configure_ssh
+
+  become: true
+  rescue:
+    - debug:
+        msg: "this failed"
+    - set_fact: task_failed=true

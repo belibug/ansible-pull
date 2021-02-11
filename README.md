@@ -8,3 +8,10 @@ pull configurations for setting up machine form git
 - figure out how to setup git ssh keys
 - figure out basic git setup
 - figure out basic accounts setup (thinking bootstrap)
+
+## Requirements
+
+- git
+- ansible
+- accounts
+- ssh keys

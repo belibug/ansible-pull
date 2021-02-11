@@ -1,0 +1,7 @@
+# base components for OS
+- block:
+  - import_tasks: users/bug.yml
+  - import_tasks: users/root.yml
+  - import_tasks: users/vidura.yml
+
+  # setup environment
