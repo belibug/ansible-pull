@@ -3,4 +3,4 @@
     user: vidura
     name: "ansible-pull from git"
     minute: "*/5"
-    job: "/usr/bin/ansible-pull -o -U git@github.com:belibug/ansible-pull.git --key-file /root/ansible/github --accept-host-key >> /var/log/ansible.log 2>&1"
+    job: "/usr/bin/ansible-pull -o -U git@github.com:belibug/ansible-pull.git --key-file /root/ansible/github --accept-host-key >> /home/vidura/ansible.log 2>&1"
