@@ -9,6 +9,7 @@
       - htop
       - tmux
       - wget
+      - pass
       - neovim
       - git
       - stow # for dot files
