@@ -15,6 +15,9 @@
       tags: base, apps
 
   tasks:
+    - name: setup crone job
+      include_tasks: playbooks/run_as_cron.yml
+
     - name: send completion alert
       tags: telegram
       include_tasks: playbooks/send_completion_alert.yml

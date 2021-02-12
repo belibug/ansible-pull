@@ -15,3 +15,13 @@ pull configurations for setting up machine form git
 - ansible
 - accounts
 - ssh keys
+
+## Right away
+
+- code to import git clone
+
+```
+git clone https://${gittoken}:x-oauth-basic@github.com/belibug/ansible-pull.git
+```
+- setup git hub ssh somehow
+- check how to pull with private repo

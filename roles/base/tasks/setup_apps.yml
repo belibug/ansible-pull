@@ -12,3 +12,4 @@
       - neovim
       - git
       - stow # for dot files
+      - gpg # for gpg and pass setup

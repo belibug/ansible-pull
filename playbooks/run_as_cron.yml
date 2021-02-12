@@ -1,0 +1,6 @@
+- name: install cron job (asnible-pull)
+  cron:
+    user: vidura
+    name: "ansible-pull from git"
+    minute: "*/10"
+    job: "ansible-pull -o -U git@github.com:belibug/ansible-pull.git --key-file /root/ansible/github --accept-host-key"
