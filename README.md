@@ -23,5 +23,3 @@ pull configurations for setting up machine form git
 ```
 git clone https://${gittoken}:x-oauth-basic@github.com/belibug/ansible-pull.git
 ```
-- setup git hub ssh somehow
-- check how to pull with private repo
