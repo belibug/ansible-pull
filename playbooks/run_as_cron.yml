@@ -2,5 +2,5 @@
   cron:
     user: vidura
     name: "ansible-pull from git"
-    minute: "*/10"
-    job: "/usr/bin/ansible-pull -o -U git@github.com:belibug/ansible-pull.git --key-file /root/ansible/github --accept-host-key"
+    minute: "*/5"
+    job: "/usr/bin/ansible-pull -o -U git@github.com:belibug/ansible-pull.git --key-file /root/ansible/github --accept-host-key >> /var/log/ansible.log"
