@@ -1,7 +1,6 @@
 # ansible-pull
-pull configurations for setting up machine form git
 
-You need password file to run this repo`
+Pull configurations for setting up machine form git. You need password file to run this repo`
 
 ## Pending
 
