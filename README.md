@@ -1,6 +1,8 @@
 # ansible-pull
 pull configurations for setting up machine form git
 
+You need password file to run this repo`
+
 ## Pending
 
 - figure out basic accounts setup (thinking bootstrap)
