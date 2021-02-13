@@ -24,8 +24,8 @@
 - name: Vidura - add secret file
   tags: settings,vidura,sudo,system,users
   copy:
-    src: vidura/test.txt
+    src: vidura/test
     dest: /home/vidura/test.txt
-    owner: vidura
+    owner: root
     group: root
     mode: 0600
