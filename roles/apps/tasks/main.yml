@@ -7,5 +7,5 @@
   become: true
   rescue:
     - debug:
-      msg: "App setup failed"
+        msg: "App setup failed"
     - set_fact: task_failed=true
