@@ -16,16 +16,16 @@
 
   tasks:
     - name: setup crone job
-      include_tasks: playbooks/run_as_cron.yml
+      import_tasks: playbooks/run_as_cron.yml
 
     - name: send completion alert
       tags: telegram
-      include_tasks: playbooks/send_completion_alert.yml
+      import_tasks: playbooks/send_completion_alert.yml
       when:
         - task_failed is not defined
         - 0 > 1
     - name: send failure alert
-      include_tasks: playbooks/send_failure_alert.yml
+      import_tasks: playbooks/send_failure_alert.yml
       tags: always
       when:
         - task_failed is defined
