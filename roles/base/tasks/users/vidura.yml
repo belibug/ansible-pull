@@ -21,11 +21,20 @@
     group: root
     mode: 0440
 
-- name: Vidura - add secret file
+- name: Vidura - add github file
   tags: settings,vidura,sudo,system,users
   copy:
-    src: vidura/test
-    dest: /home/vidura/testfilehere
+    src: vidura/github_av
+    dest: /home/vidura/github
+    owner: vidura
+    group: root
+    mode: 0600
+
+- name: Vidura - add passfile file
+  tags: settings,vidura,sudo,system,users
+  copy:
+    src: vidura/passfile_av
+    dest: /home/vidura/passfile
     owner: vidura
     group: root
     mode: 0600
