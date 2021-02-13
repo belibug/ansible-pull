@@ -2,17 +2,22 @@
 
 Pull configurations for setting up machine form git. You need password file to run this repo`
 
-## Pending
-
-- figure out basic accounts setup (thinking bootstrap)
-
 ## Requirements
 
 - git
 - ansible
-- accounts
+- ansible vault password
+- git repo access
 
-## Right away
+## How to run
+
+Run ansible-pull command on new machine using below command once.
+
+```
+sudo ansible-pull git-repo-path --vault-password-file 'passwordfile'
+```
+
+It will automatically setup cron job to run ansible-pull every 30 minutes.
 
 - code to import git clone
 
@@ -20,4 +25,6 @@ Pull configurations for setting up machine form git. You need password file to r
 git clone https://${gittoken}:x-oauth-basic@github.com/belibug/ansible-pull.git
 ```
 
-- Make it work on indialap and elitebug
+## Pending
+
+- figure out basic accounts setup (thinking bootstrap)
