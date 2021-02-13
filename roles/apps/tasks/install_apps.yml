@@ -1,0 +1,17 @@
+# Install apps
+- name: Install must have apps
+  tags: packages, apps
+  apt:
+    state: latest
+    name:
+      - tree
+      - curl
+      - htop
+      - tmux
+      - wget
+      - pass
+      - neovim
+      - git
+      - stow # for dot files
+      - gpg # for gpg and pass setup
+      - ansible # might use anislbe-vault

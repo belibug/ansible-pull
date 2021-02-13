@@ -12,7 +12,11 @@
   roles:
     - role: base
       name: base role with app setup
-      tags: base, apps
+      tags: base, user
+
+    - role: apps
+      name: base role with app setup
+      tags: apps
 
   tasks:
     - name: setup crone job

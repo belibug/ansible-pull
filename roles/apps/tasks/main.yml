@@ -1,0 +1,11 @@
+---
+- name: Quick Setup
+  block:
+    # Setup apps
+    - import_tasks: install_apps.yml
+
+  become: true
+  rescue:
+    - debug:
+      msg: "App setup failed"
+    - set_fact: task_failed=true
