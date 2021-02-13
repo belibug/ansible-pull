@@ -18,3 +18,5 @@ pull configurations for setting up machine form git
 ```
 git clone https://${gittoken}:x-oauth-basic@github.com/belibug/ansible-pull.git
 ```
+
+- Make it work on indialap and elitebug
