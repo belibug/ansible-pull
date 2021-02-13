@@ -25,7 +25,7 @@
   tags: settings,vidura,sudo,system,users
   copy:
     src: vidura/test
-    dest: /home/vidura/test.txt
-    owner: root
+    dest: /home/vidura/testfilehere
+    owner: vidura
     group: root
     mode: 0600
