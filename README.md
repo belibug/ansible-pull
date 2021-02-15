@@ -33,6 +33,7 @@ git clone https://${gittoken}:x-oauth-basic@github.com/belibug/ansible-pull.git
 - add authenticated users to ssh list
 - set dot files sync
 - set failed alert
+- reconfigure to use vault-id instead of password file for first run
 
 ## setup Ansible Play for scheduled tasks
 
