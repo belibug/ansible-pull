@@ -1,4 +1,5 @@
 - name: download dotfiles from git repo
+  tags: dotfiles
   git:
     repo: git@github.com:belibug/dotfiles.git
     version: master
@@ -8,6 +9,7 @@
   become: false
 
 - name: stow dotfiles to repo
+  tags: dotfiles
   command: "stow {{ item }} --target=/home/bug"
   args:
     chdir: /home/bug/.dotfiles/files
