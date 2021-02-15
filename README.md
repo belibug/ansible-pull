@@ -4,6 +4,8 @@ Pull configurations for setting up machine form git. You need password file to r
 
 ## Requirements
 
+Create below requirements with bootstrap shell script
+
 - git
 - ansible
 - ansible vault password
@@ -27,4 +29,15 @@ git clone https://${gittoken}:x-oauth-basic@github.com/belibug/ansible-pull.git
 
 ## Pending
 
-- figure out basic accounts setup (thinking bootstrap)
+- setup bug user
+- add authenticated users to ssh list
+- set dot files sync
+- set failed alert
+
+## setup Ansible Play for scheduled tasks
+
+- udpate and upgrade repos
+- security stuff
+	- check and clean users
+	- check backup
+- perform git pull
