@@ -3,6 +3,7 @@
   block:
     # Setup apps
     - import_tasks: install_apps.yml
+    - import_tasks: dotfiles_apps.yml
 
   become: true
   rescue:
