@@ -16,7 +16,7 @@ Create below requirements with bootstrap shell script
 Run ansible-pull command on new machine using below command once.
 
 ```
-sudo ansible-pull git-repo-path --vault-password-file 'passwordfile'
+sudo ansible-pull git@github.com:belibug/ansible-pull.git --vault-id bug@prompt
 ```
 
 It will automatically setup cron job to run ansible-pull every 30 minutes.
