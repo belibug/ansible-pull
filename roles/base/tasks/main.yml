@@ -3,13 +3,14 @@
   block:
     # Setup users
     - import_tasks: users/vidura.yml
+      tags: vidura
+
+    - import_tasks: users/bug.yml
+      tags: bug
 
     # setup ssh
     - import_tasks: setup_ssh.yml
       tags: configure_ssh
-
-    - import_tasks: users/vidura.yml
-      tags: bug
 
   become: true
   rescue:
