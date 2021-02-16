@@ -16,8 +16,9 @@ Create below requirements with bootstrap shell script
 Run ansible-pull command on new machine using below command once.
 
 ```
-sudo ansible-pull git@github.com:belibug/ansible-pull.git --vault-id bug@prompt
+sudo ansible-pull git@github.com:belibug/ansible-pull.git --key-file somefile --vault-id bug@prompt --accept-host-key
 ```
+You can use api-token instead of key for first run
 
 It will automatically setup cron job to run ansible-pull every 30 minutes.
 
