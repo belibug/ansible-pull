@@ -1,11 +1,9 @@
-- name: create user | vidura
-  tags: vidura
+- name: Vidura - create user  
   user:
     name: vidura
     group: root
 
-- name: add public key | vidura
-  tags: vidura
+- name: Vidura - add public key
   authorized_key:
     user: vidura
     key: "{{ item }}"
@@ -13,7 +11,6 @@
     - vidura/vidura.pub
 
 - name: Vidura - add sudoers file
-  tags: settings,vidura,sudo,system,users
   copy:
     src: vidura/sudoers_vidura
     dest: /etc/sudoers.d/vidura
@@ -22,7 +19,6 @@
     mode: 0440
 
 - name: Vidura - add github file
-  tags: settings,vidura,sudo,system,users
   copy:
     src: vidura/github_av
     dest: /home/vidura/github
@@ -31,7 +27,6 @@
     mode: 0600
 
 - name: Vidura - add passfile file
-  tags: settings,vidura,sudo,system,users
   copy:
     src: vidura/passfile_av
     dest: /home/vidura/passfile

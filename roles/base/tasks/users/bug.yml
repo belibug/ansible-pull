@@ -1,9 +1,9 @@
-- name: create group bug
+- name: Bug - create group
   group:
     name: bug
     state: present
 
-- name: create user bug
+- name: Bug - create user
   user:
     name: bug
     group: root
@@ -11,7 +11,7 @@
     comment: "beli bug"
     password: "{{ bug_passwd }}"
 
-- name: add public key 
+- name: Bug - add public key 
   authorized_key:
     user: bug
     key: "{{ item }}"
@@ -23,7 +23,7 @@
     - bug/laptop-office.pub
     - bug/macmini.pub
 
-- name: add sudoers file
+- name: Bug - add sudoers file
   copy:
     src: bug/sudoers_bug
     dest: /etc/sudoers.d/bug

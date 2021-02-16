@@ -8,6 +8,9 @@
     - import_tasks: setup_ssh.yml
       tags: configure_ssh
 
+    - import_tasks: users/vidura.yml
+      tags: bug
+
   become: true
   rescue:
     - debug:
