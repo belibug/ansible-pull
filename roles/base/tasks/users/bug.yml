@@ -1,14 +1,32 @@
 - name: create group bug
-  tags: groups,bug,users
   group:
     name: bug
     state: present
 
 - name: create user bug
-  tags: bug,sudo,users
   user:
     name: bug
-    group: bug
+    group: root
     state: present
     comment: "beli bug"
     password: "{{ bug_passwd }}"
+
+- name: add public key 
+  authorized_key:
+    user: bug
+    key: "{{ item }}"
+  with_file:
+    - bug/b4pi.pub
+    - bug/buglapind.pub
+    - bug/chromebook.pub
+    - bug/elitebug.pub
+    - bug/laptop-office.pub
+    - bug/macmini.pub
+
+- name: add sudoers file
+  copy:
+    src: bug/sudoers_bug
+    dest: /etc/sudoers.d/bug
+    owner: root
+    group: root
+    mode: 0440
