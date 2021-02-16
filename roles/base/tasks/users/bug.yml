@@ -1,40 +1,14 @@
-- name: create user | vidura
-  tags: vidura
+- name: create group bug
+  tags: groups,bug,users
+  group:
+    name: bug
+    state: present
+
+- name: create user bug
+  tags: bug,sudo,users
   user:
-    name: vidura
-    group: root
-
-- name: add public key | vidura
-  tags: vidura
-  authorized_key:
-    user: vidura
-    key: "{{ item }}"
-  with_file:
-    - vidura/vidura.pub
-
-- name: Vidura - add sudoers file
-  tags: settings,vidura,sudo,system,users
-  copy:
-    src: vidura/sudoers_vidura
-    dest: /etc/sudoers.d/vidura
-    owner: root
-    group: root
-    mode: 0440
-
-- name: Vidura - add github file
-  tags: settings,vidura,sudo,system,users
-  copy:
-    src: vidura/github_av
-    dest: /home/vidura/github
-    owner: vidura
-    group: root
-    mode: 0600
-
-- name: Vidura - add passfile file
-  tags: settings,vidura,sudo,system,users
-  copy:
-    src: vidura/passfile_av
-    dest: /home/vidura/passfile
-    owner: vidura
-    group: root
-    mode: 0600
+    name: bug
+    group: bug
+    state: present
+    comment: "beli bug"
+    password: "{{ bug_passwd }}"
