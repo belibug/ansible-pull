@@ -7,7 +7,6 @@
     accept_hostkey: yes
     key_file: "{{ git_key_file }}"
   become: yes
-  become_user: bug
 
 - name: stow dotfiles to repo
   tags: dotfiles

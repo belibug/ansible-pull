@@ -20,7 +20,7 @@
 
 - name: Vidura - add github file
   copy:
-    src: vidura/github_av
+    src: github_av
     dest: /home/vidura/github
     owner: vidura
     group: root
