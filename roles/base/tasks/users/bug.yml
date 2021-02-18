@@ -34,7 +34,7 @@
 - name: bug - add github  key file
   copy:
     src: github_av       
-    dest: /home/bug/github
+    dest: /home/bug/.ssh/github
     owner: bug
     group: root
     mode: 0600
