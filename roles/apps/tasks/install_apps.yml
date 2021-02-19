@@ -12,6 +12,7 @@
       - pass
       - neovim
       - git
-      - stow # for dot files
-      - gpg # for gpg and pass setup
-      - ansible # might use anislbe-vault
+      - stow      # for dot files
+      - gpg       # for gpg and pass setup
+      - ansible   # might use anislbe-vault
+      - fzf       # fuzzy file search
