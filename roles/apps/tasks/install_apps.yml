@@ -10,7 +10,7 @@
       - tmux
       - wget
       - pass
-      - neovim
+      - neovim    # text editor
       - git
       - stow      # for dot files
       - gpg       # for gpg and pass setup
